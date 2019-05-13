@@ -47,10 +47,10 @@ export default class Signaling extends events.EventEmitter {
             };
         }
         var twilioIceServers = [
-            { url: 'stun:global.stun.twilio.com:3478?transport=udp' }
+            // { url: 'stun:global.stun.twilio.com:3478?transport=udp' }
         ];
 
-        configuration = { "iceServers": [{ "url": "stun:stun.l.google.com:19302" }] };
+        configuration = { "iceServers": [{ "url": "stuns:gaze.otduet:5349" }] };
 
         this.socket = new WebSocket(this.url);
         this.socket.onopen = () => {
